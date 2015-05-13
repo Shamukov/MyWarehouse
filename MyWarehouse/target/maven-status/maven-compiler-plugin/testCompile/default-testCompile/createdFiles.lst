@@ -1,0 +1,11 @@
+dao\ElementPartyTest.class
+dao\OrderGoodsTest.class
+dao\SectorTest.class
+dao\PreservationTest.class
+dao\StorageTest.class
+dao\ProviderTest.class
+dao\GoodsTypeTest.class
+dao\ClientTest.class
+dao\GoodsTest.class
+dao\PartyGoodsTest.class
+dao\ElementOrderGoodsTest.class
