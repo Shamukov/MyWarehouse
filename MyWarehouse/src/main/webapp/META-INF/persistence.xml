@@ -26,6 +26,7 @@
 <!--          <property name="eclipselink.logging.level" value="info"/> -->
          <property name="eclipselink.ddl-generation" value="create-tables"/>
          <property name="javax.persistence.jdbc.password" value="123"/>
+         <property name="eclipselink.jdbc.exclusive-connection.is-lazy" value="true"/>
       </properties>
       
    </persistence-unit>

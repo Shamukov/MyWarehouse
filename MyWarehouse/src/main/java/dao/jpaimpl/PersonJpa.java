@@ -30,7 +30,7 @@ public class PersonJpa extends JpaDao {
 			list.add(entityType.getName());
 		return list;
 	}
-
+	// верхний регистр (получаю элементы класса)
 	@SuppressWarnings("unchecked")
 	public Class<? extends BasicEntity> getEntityClass(String name) {
 		for (EntityType<?> entityType : entityManager.getMetamodel()
@@ -39,7 +39,7 @@ public class PersonJpa extends JpaDao {
 				return (Class<? extends BasicEntity>) entityType.getJavaType();
 		return null;
 	}
-
+	
 	@SuppressWarnings("unchecked")
 	public List<? extends BasicEntity> findAllPreservation() {
 		Query query = entityManager.createQuery("Select e from Preservation e  where e.volume !=0 ");

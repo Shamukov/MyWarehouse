@@ -9,21 +9,34 @@
 </head>
 <body>
 	<form action="controller" method="post">
-	<input type="hidden" name="command" value="ShowTable">
-		 <select name="nameEntity">
-<%-- 				<c:forEach var="line" items="${allNameEntity}"> --%>
-<%-- 					<option value="${line}" label="${line}"></option> --%>
-<%-- 				</c:forEach> --%>
-		<option value="Client" label="клиент"></option> 
-		<option value="Preservation" label="сохранения на складе"></option> 
-		<option value="Goods" label="товары"></option> 
-		<option value="ElementOrderGoods" label="заказы"></option> 
+		<input type="hidden" id="command" name="command" value="ShowTable"> <select
+			name="nameEntity">
+
+
+			<option value="Goods" label="товары"></option>
+
+			<option value="Preservation" label="склад"></option>
+
+			<option value="Client" label="клиенты"></option>
+
+			<option value="OrderGoods" label="заказы"></option>
 
 
 
 
-			</select>
-		<input type="submit" value="отправить">
+		</select> <input type="submit" value="отправить">
 	</form>
+	<script>
+		var d = document, myForm = d.forms[0], output = d
+				.getElementById('nameEntity');
+		myForm.nameEntity.addEventListener('change', function() {
+			if(this.value!="Goods"&&this.value!="Preservation"){
+			var start = d.getElementById("command");
+
+			start.value = "show" + this.value;
+			console.log(start);
+			}
+		}, false);
+	</script>
 </body>
 </html>

@@ -9,18 +9,10 @@
 </head>
 <body>
 	<form action="controller" method="post">
-		<input type="hidden" id="command" name="command" value="">
+		<input type="hidden" id="command" name="command" value="showPreservation">
 		<select name="nameEntity">
-			<%-- 				<c:forEach var="line" items="${allNameEntity}"> --%>
-			<%-- 					<option value="${line}" label="${line}"></option> --%>
-			<%-- 				</c:forEach> --%>
-
-			<option value="Client" label="клиенты"></option>
-
-			<option value="OrderGoods" label="заказы"></option>
-
-			<option value="Preservation" label="склад"></option>
-
+			
+			<option value="Preservation" label="сохранения на складе"></option>			
 			<option value="TypeGoods" label="тип товара"></option>
 
 			<option value="ElementParty" label="элементы партий"></option>
@@ -28,6 +20,8 @@
 			<option value="Goods" label="товары"></option>
 
 			<option value="Provider" label="поставщики"></option>
+			
+			<option value="PartyGoods" label="партии поставки"></option>
 		</select> <input type="submit" value="отправить">
 	</form>
 	<script>

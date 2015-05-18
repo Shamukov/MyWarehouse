@@ -10,8 +10,11 @@ import logic.command.basiccomand.BasicCommand;
 import model.entity.OrderGoods;
 import model.entity.Preservation;
 
+import org.apache.log4j.Logger;
+
 public class ShowDispatch extends BasicCommand {
 	static final String PAGE = "tableInsert/dispatch";
+	Logger log = Logger.getLogger(getClass());
 
 	private List<OrderGoods> listOrderGoods;
 	private List<Preservation> listPreservation;
@@ -25,8 +28,12 @@ public class ShowDispatch extends BasicCommand {
 
 	@Override
 	public String execute() {
+		log.trace("executeShowDispatch");
 		listOrderGoods = jpa.findAll(OrderGoods.class);
-		listPreservation = jpa.findAll(Preservation.class);
+		listPreservation = jpa.findPreservationCondition(-1);
+		for (Preservation element : listPreservation) {
+			log.debug(element);
+		}
 		return PAGE;
 	}
 
@@ -41,5 +48,4 @@ public class ShowDispatch extends BasicCommand {
 		// TODO Auto-generated method stub
 		return true;
 	}
-
 }

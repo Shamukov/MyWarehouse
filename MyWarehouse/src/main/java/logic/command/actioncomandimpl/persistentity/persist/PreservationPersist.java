@@ -29,6 +29,7 @@ public class PreservationPersist extends BasicCommand {
 	public String execute() {
 		ElementParty elementParty = jpa
 				.find(ElementParty.class, elementPartyId);
+		//прописать 
 		Sector sector = jpa.find(Sector.class, sectorId);
 		Logger.getLogger(getClass()).debug(
 				"sector = " + sector + " elementParty= " + elementParty);

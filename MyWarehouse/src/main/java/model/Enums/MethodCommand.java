@@ -12,6 +12,7 @@ import logic.command.actioncomandimpl.persistentity.ShowDispatch;
 import logic.command.actioncomandimpl.persistentity.ShowElementParty;
 import logic.command.actioncomandimpl.persistentity.ShowGoods;
 import logic.command.actioncomandimpl.persistentity.ShowOrderGoods;
+import logic.command.actioncomandimpl.persistentity.ShowPartyGoods;
 import logic.command.actioncomandimpl.persistentity.ShowPreservation;
 import logic.command.actioncomandimpl.persistentity.ShowProvider;
 import logic.command.actioncomandimpl.persistentity.ShowTypeGoods;
@@ -20,12 +21,14 @@ import logic.command.actioncomandimpl.persistentity.persist.Dispatch;
 import logic.command.actioncomandimpl.persistentity.persist.ElementPartyPersist;
 import logic.command.actioncomandimpl.persistentity.persist.GoodsPersist;
 import logic.command.actioncomandimpl.persistentity.persist.OrderGoodsPersist;
+import logic.command.actioncomandimpl.persistentity.persist.PartyGoodsPersist;
 import logic.command.actioncomandimpl.persistentity.persist.PersistClient;
 import logic.command.actioncomandimpl.persistentity.persist.PreservationPersist;
 import logic.command.actioncomandimpl.persistentity.persist.ProviderPersist;
 import logic.command.actioncomandimpl.persistentity.persist.TypeGoodsPesist;
 import logic.command.actioncomandimpl.show.ShowAllEntity;
 import logic.command.actioncomandimpl.show.ShowPersistEntity;
+import logic.command.actioncomandimpl.show.ShowReports;
 import logic.command.actioncomandimpl.show.ShowTable;
 import logic.command.actioncomandimpl.update.ShowUpdatePreservation;
 import logic.command.actioncomandimpl.update.UpdatePreservation;
@@ -233,6 +236,27 @@ public enum MethodCommand {
 				HttpServletResponse response) {
 			// TODO Auto-generated method stub
 			return new Search(request, response);
+		}
+	},SHOWREPORTS{
+		@Override
+		public BasicCommand create(HttpServletRequest request,
+				HttpServletResponse response) {
+			// TODO Auto-generated method stub
+			return new ShowReports(request, response);
+		}
+	},SHOWPARTYGOODS{
+		@Override
+		public BasicCommand create(HttpServletRequest request,
+				HttpServletResponse response) {
+			// TODO Auto-generated method stub
+			return new ShowPartyGoods(request, response);
+		}
+	},PARTYGOODSPERSIST{
+		@Override
+		public BasicCommand create(HttpServletRequest request,
+				HttpServletResponse response) {
+			// TODO Auto-generated method stub
+			return new PartyGoodsPersist(request, response);
 		}
 	};
 	public abstract BasicCommand create(HttpServletRequest request,

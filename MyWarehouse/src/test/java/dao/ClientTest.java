@@ -18,12 +18,12 @@ public class ClientTest {
 	Client element1;
 	Client element2;
 
-	@BeforeClass
+	@BeforeClass  // инициализ подключение к базе
 	public static void init() {
 		personJpa = new PersonJpa();
 	}
 
-	@Before
+	@Before 
 	public void initElement() {
 		List<Client> list = personJpa.findAll(Client.class);
 		for (Client client : list) {
@@ -43,12 +43,12 @@ public class ClientTest {
 		assertTrue("size != 2", list.size() == 2);
 	}
 
-	@Test
+	@Test // create
 	public void persiste() {
 		assertEquals(element1, personJpa.find(Client.class, element1.getId()));
 	}
 
-	@Test
+	@Test 
 	public void find() {
 		assertEquals(element1, personJpa.find(Client.class, element1.getId()));
 	}
@@ -61,7 +61,7 @@ public class ClientTest {
 		assertEquals(personJpa.update(element1), element1);
 	}
 
-	@Test
+	@Test 
 	public void remove() {
 		personJpa.remove(element1);
 		personJpa.remove(element2);

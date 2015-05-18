@@ -17,6 +17,7 @@ dao\jpa\JpaDao.class
 logic\command\actioncomandimpl\show\ShowPersistEntity.class
 model\Enums\MethodCommand$6.class
 model\Enums\MethodCommand$24.class
+logic\command\actioncomandimpl\show\ShowReports.class
 model\entity\PartyGoods.class
 logic\command\actioncomandimpl\persistentity\ShowElementParty.class
 logic\command\actioncomandimpl\ErrorCommand.class
@@ -54,6 +55,7 @@ model\Enums\MethodCommand$10.class
 logic\command\actioncomandimpl\persistentity\ShowClient.class
 logic\command\actioncomandimpl\Search.class
 logic\command\actioncomandimpl\show\ShowTable.class
+model\Enums\MethodCommand$27.class
 logic\command\actioncommand\ActionCommand.class
 model\Enums\MethodCommand$20.class
 model\Enums\MethodCommand$3.class

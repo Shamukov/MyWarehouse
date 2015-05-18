@@ -6,26 +6,61 @@
 <head>
 <link rel="stylesheet" href="css/style.css" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Show all orders</title>
+	<title>Show Client</title>
 
-</head>
-<body>
-	<h5 align="center" style="text-align: center;size: 20">Show all orders</h5>
-	
-	<table >
-		<tr>
-			<th>номре</th>
-			<th>количество</th>
-			<th>клиент</th>
-			<th>поставщик</th>
-			<th>товары</th>
-			<th>тип товара</th>
-			<th>сектор</th>
-			<th>хранилище</th>
-			
-		</tr>
-		
-		<c:forEach items="${listEntity}" var="element" >
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <link href="css/theme.css" rel="stylesheet">
+
+  </head>
+
+  <body role="document">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Logistic</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="LoginController">Меню</a></li>
+			<li class="active"><a href="index.html">Выйти</a></li>         
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <div class="jumbotron">
+        <h1>Отчетность</h1>
+        <p>Список заказов</p>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6">
+          <table class="table" style="margin: 0 50%">
+            <thead>
+              <tr>
+                <th>Номер</th>
+				<th>Количество</th>
+				<th>Клиент</th>
+				<th>Поставщик</th>
+				<th>Товары</th>
+				<th>Тип товара</th>
+				<th>Сектор</th>
+				<th>Хранилище</th>
+              </tr>
+            </thead>
+            <c:forEach items="${listEntity}" var="element" >
 			
 			<tr>
 			
@@ -42,7 +77,19 @@
 			</tr>
 			
 		</c:forEach>
-		
-	</table>
-</body>
+          </table>
+        </div>
+
+
+    </div> <!-- /container -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+
+  </body>
 </html>
+		
+		
+		
+
+

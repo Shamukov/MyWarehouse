@@ -49,7 +49,7 @@ public class OrderGoodsPersist extends BasicCommand {
 			return false;
 		Calendar cal = Calendar.getInstance();
 		cal.set(Integer.valueOf(mStart.group(3)),
-				Integer.valueOf(mStart.group(2)),
+				Integer.valueOf(mStart.group(2))-1,
 				Integer.valueOf(mStart.group(1)));
 		orderDate = cal.getTime();
 		String client = request.getParameter("client");

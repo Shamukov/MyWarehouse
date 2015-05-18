@@ -1,5 +1,6 @@
 D:\java\MyWarehouse\src\main\java\dao\DaoI.java
 D:\java\MyWarehouse\src\main\java\logic\command\actioncomandimpl\persistentity\persist\ElementPartyPersist.java
+D:\java\MyWarehouse\src\main\java\logic\command\actioncomandimpl\show\ShowReports.java
 D:\java\MyWarehouse\src\main\java\model\entity\ElementParty.java
 D:\java\MyWarehouse\src\main\java\model\Enums\MethodCommand.java
 D:\java\MyWarehouse\src\main\java\logic\command\actioncomandimpl\persistentity\ShowProvider.java

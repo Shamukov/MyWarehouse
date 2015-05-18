@@ -1,6 +1,6 @@
 package dao;
 
-
+// интерфейс
 public interface DaoI {
 	public <T> T persist(T entity);
 	public <T> T find(Class<T> type,int id);
