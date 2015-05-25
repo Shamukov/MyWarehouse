@@ -43,6 +43,7 @@ public class ElementPartyPersist extends BasicCommand {
 
 	@Override
 	public boolean parseValidate() {
+		try{
 		  String numberLine=request.getParameter("number");
 		if (numberLine == null)
 			return false;
@@ -57,6 +58,11 @@ public class ElementPartyPersist extends BasicCommand {
 		if (goods == null)
 			return false;
 		goodsId = Integer.valueOf(goods);
+		}catch(NumberFormatException ex){
+			ex.printStackTrace();
+			return false;
+			
+		}
 		return true;
 	}
 

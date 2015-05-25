@@ -37,13 +37,17 @@ public class GoodsPersist extends BasicCommand {
 
 	@Override
 	public boolean parseValidate() {
+		try{
 		  definition= request.getParameter("definition");
-		if (definition == null)
+		if (definition == null||definition.isEmpty())
 			return false;
 		String typeGoods= request.getParameter("typeGoods");
-		if (typeGoods == null)
+		if (typeGoods == null||typeGoods.isEmpty())
 			return false;
 		typeGoodsId = Integer.valueOf(typeGoods);
+		}catch(NumberFormatException ex){
+			return false;
+		}
 		return true;
 	}
 

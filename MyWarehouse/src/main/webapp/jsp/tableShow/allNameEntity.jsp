@@ -5,38 +5,108 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-	<form action="controller" method="post">
-		<input type="hidden" id="command" name="command" value="ShowTable"> <select
-			name="nameEntity">
+
+    <title>trap</title>
+
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Logistic</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="LoginController">Меню</a></li>
+			<li class="active"><a href="/MyWarehouse/">Выйти</a></li> 
+               
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+    <div class="container marketing" style="margin-top: 10%">
+
+ 
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Товары</h2>
+          <p>Просмотр товара</p>
+          <form action="controller" method="post" >
+          <input type="hidden" name="command" value="showTable">
+          <input type="hidden" name="nameEntity" value="Goods">
+          <p><input class="btn btn-default" type="submit" value="Начать &raquo"></p>
+          </form>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Склад</h2>
+          <p>Просмотр секторов склада</p>
+          <form action="controller" method="post" >
+          <input type="hidden" name="command" value="showTable">
+          <input type="hidden" name="nameEntity" value="Preservation">
+          <p><input class="btn btn-default" type="submit" value="Начать &raquo"></p>
+          </form>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Клиенты</h2>
+          <p>Добавьте клиентов если его нет в списках</p>
+          <form action="controller" method="post" >
+          <input type="hidden" name="command" value="showClient">
+          <input type="hidden" name="nameEntity" value="Client">
+          <p><input class="btn btn-default" type="submit" value="Начать &raquo"></p>
+          </form>
+        </div><!-- /.col-lg-4 -->
+		<div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Заказ</h2>
+          <p>Добавление даты заказа</p>
+          <form action="controller" method="post" >
+          <input type="hidden" name="command" value="showOrderGoods">
+          <input type="hidden" name="nameEntity" value="OrderGoods">
+          <p><input class="btn btn-default" type="submit" value="Начать &raquo"></p>
+          </form>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+	
+
+      <hr class="featurette-divider">
+
+      <footer>
+        <p>&copy; 2015 Logistic, Inc. &middot;</p>
+      </footer>
+
+    </div><!-- /.container -->
 
 
-			<option value="Goods" label="товары"></option>
-
-			<option value="Preservation" label="склад"></option>
-
-			<option value="Client" label="клиенты"></option>
-
-			<option value="OrderGoods" label="заказы"></option>
-
-
-
-
-		</select> <input type="submit" value="отправить">
-	</form>
-	<script>
-		var d = document, myForm = d.forms[0], output = d
-				.getElementById('nameEntity');
-		myForm.nameEntity.addEventListener('change', function() {
-			if(this.value!="Goods"&&this.value!="Preservation"){
-			var start = d.getElementById("command");
-
-			start.value = "show" + this.value;
-			console.log(start);
-			}
-		}, false);
-	</script>
-</body>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>

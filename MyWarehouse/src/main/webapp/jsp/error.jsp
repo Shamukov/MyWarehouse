@@ -30,7 +30,7 @@
             <h1 class="cover-heading">Упс, что-то пошло не так</h1>
            	<p>Пожалуйста повторите попытку ввода, возможно вы ввели неверные данные</p>
           </div>
-
+			 <p><a class="btn btn-primary" href="/MyWarehouse/" role="button">Попробовать еще раз &raquo;</a></p>
           <div class="mastfoot">
             <div class="inner">
               <p>Все права защищены <a href="http://logistic.com">Logistic</a>, by <a href="https://mail.ru">@Shamukov</a>.</p>

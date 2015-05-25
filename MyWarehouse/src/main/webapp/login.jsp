@@ -28,17 +28,13 @@
  			<div class="inner cover">
             <h1 class="cover-heading">Если вы являетесь работником склада фирмы Logistic, введите свой логин и пароль</h1>
            <form action="LoginController" method="post">
- 		<label for="inputEmail" name="command" class="sr-only" value="checkAuthentication">Введите логин</label>
-        <input type="text" name="user" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Пароль</label>
-        <input type="password" name="pwd" id="inputPassword" class="form-control" placeholder="Password" required>
-<div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Запомнить
-          </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
-      </form>	
+ <input type="hidden" name="command" class="sr-only" value="checkAuthentication" > 
+Username: <input type="text" class="form-control"  name="user">
+<br>
+Password: <input type="password" class="form-control"  name="pwd">
+<br>
+<input type="submit" class="btn btn-lg btn-primary btn-block" value="Login">
+</form>	
           </div>
 
           <div class="mastfoot">

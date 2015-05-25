@@ -39,7 +39,7 @@ public class PersistClient extends BasicCommand {
 		name = request.getParameter("name");
 		score = request.getParameter("score");
 		address = request.getParameter("address");
-		if(name==null||score==null||address==null)
+		if(name==null||name.isEmpty()||score==null||address==null)
 			return false;
 
 		return true;

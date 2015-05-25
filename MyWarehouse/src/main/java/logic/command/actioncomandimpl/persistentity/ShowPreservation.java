@@ -28,6 +28,13 @@ public class ShowPreservation extends BasicCommand {
 	public String execute() {
 		listElementParty = jpa.findAll(ElementParty.class);
 		listSector = jpa.findAll(Sector.class);
+		for (int i = 0;i < listElementParty.size();i++){
+			if(listElementParty.get(i).getNumber()==0){
+				listElementParty.remove(i);
+				i--;
+			}
+			
+		}
 		return PAGE;
 	}
 

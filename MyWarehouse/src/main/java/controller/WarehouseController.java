@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import logic.command.actioncomandimpl.ErrorCommand;
+import logic.command.actioncomandimpl.ErrorCommandParse;
 import logic.command.basiccomand.BasicCommand;
 import model.Enums.MethodCommand;
 
@@ -72,7 +73,7 @@ public class WarehouseController extends HttpServlet {
 				+ basicCommand.getClass().getSimpleName());
 
 		if (!basicCommand.parseValidate())
-			basicCommand = setCommandError(
+			basicCommand = setCommandErrorParse(
 					"got a error in the parse or validate", req, resp);
 		log.trace("validate and parse command");
 
@@ -85,6 +86,15 @@ public class WarehouseController extends HttpServlet {
 
 		forward(req, resp, page);
 
+	}
+
+	private BasicCommand setCommandErrorParse(String message,
+			HttpServletRequest req, HttpServletResponse resp) {
+		// TODO Auto-generated method stub
+
+		log.debug("message error=" + message);
+		return new ErrorCommandParse(req, resp,
+				message);
 	}
 
 	/**

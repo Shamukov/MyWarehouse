@@ -35,7 +35,12 @@ public class PreservationPersist extends BasicCommand {
 				"sector = " + sector + " elementParty= " + elementParty);
 		if (sector == null || elementParty == null)
 		return null;
-		
+		if(elementParty.getNumber()-volume<0){
+			return "errorData";
+			
+		}
+		elementParty.setNumber(elementParty.getNumber()-volume);
+		jpa.update(elementParty);
 		Preservation element = new Preservation(0, volume, sector, elementParty);
 		jpa.persist(element);
 		return PAGE;

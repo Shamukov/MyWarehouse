@@ -38,7 +38,7 @@ public class ProviderPersist extends BasicCommand {
 		score = request.getParameter("score");
 		definition=request.getParameter("definition");
 		address = request.getParameter("address");
-		if(name==null||score==null||address==null||definition==null)
+		if(name==null||name.isEmpty()||score==null||address==null||definition==null)
 			return false;
 		return true;
 	}

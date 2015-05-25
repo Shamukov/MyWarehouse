@@ -32,7 +32,7 @@
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="LoginController">Меню</a></li>
-					<li class="active"><a href="index.html">Выйти</a>
+					<li class="active"><a href="/MyWarehouse/">Выйти</a>
 					</li>
 				</ul>
 			</div>

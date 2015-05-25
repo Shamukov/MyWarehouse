@@ -36,7 +36,7 @@ public class ClientPersist extends BasicCommand {
 		name = request.getParameter("name");
 		score = request.getParameter("score");
 		address = request.getParameter("address");
-		if(name==null||score==null||address==null)
+		if(name==null||name.isEmpty()||score==null||name.isEmpty()||address==null||name.isEmpty())
 			return false;
 		return true;
 	}

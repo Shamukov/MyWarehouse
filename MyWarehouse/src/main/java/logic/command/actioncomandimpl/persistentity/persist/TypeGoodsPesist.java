@@ -35,7 +35,7 @@ public class TypeGoodsPesist extends BasicCommand {
 	public boolean parseValidate() {
 		name = request.getParameter("name");
 		org.apache.log4j.Logger.getLogger(getClass()).debug("имя="+name);
-		if (name == null)
+		if (name == null||name.isEmpty())
 			return false;
 		return true;
 	}
